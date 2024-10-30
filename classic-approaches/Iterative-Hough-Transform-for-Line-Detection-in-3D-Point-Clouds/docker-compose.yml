@@ -1,0 +1,19 @@
+version: '3.9'
+
+services:
+  ubuntu:
+    build:
+      context: .
+      dockerfile: ./docker/ubuntu/Dockerfile
+      no_cache: false
+    container_name: Iterative-Hough-Transform-for-Line-Detection-in-3D-Point-Clouds
+    restart: unless-stopped
+    tty: true
+    environment:
+      DOMAINS: ""
+    ports:
+      - "443:443"
+    volumes:
+      - ./_project.code-workspace:/workspace/_project.code-workspace
+      - ./.vscode:/workspace/.vscode
+      - ./app:/workspace/app
