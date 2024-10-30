@@ -1,0 +1,1 @@
+Current size of datasets collection is about 15GB so it is saved only locally.
